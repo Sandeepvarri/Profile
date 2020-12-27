@@ -24,10 +24,10 @@ class Home extends Component {
             <div className='container mt-3'>
                 <Jumbotron>
                     <div className='row'>
-                        <div className='col-md-4'>
+                        <div className='col-12 col-md-4 mb-2'>
                             <img className='profileImage img-thumbnail' src='/PoornaVarriProfileImage.jpg' alt='profile' />
                         </div>
-                        <div className='col-md-8'>
+                        <div className='col-12 col-md-8'>
                         <h3 className='genColor'><FontAwesomeIcon icon={['fas', 'user-tie']} size='1x'/> {this.state.firstname} {this.state.lastname}</h3>
                             <div className='genColor'><FontAwesomeIcon icon={['fas', 'briefcase']} size='1x'/> <strong >{this.state.currentPos}</strong>
                             <p className="blockquote-footer">{this.state.currentPosLoc} <FontAwesomeIcon icon={['fas', 'map-marker-alt']}/> </p></div>

@@ -99,7 +99,7 @@ class Resume extends Component {
         return (
             <div className='container'>
                 <div className='row'>
-                    <div className='offset-9 col-3'>
+                    <div className='offset-3 col-9 offset-md-8 col-md-4'>
                         <a href='/Resume.pdf' rel="noreferrer" className='btn btn-primary mt-2 mb-2 resumeDnld' download>
                             <FontAwesomeIcon icon={['fas', 'download']} className='mr-1' />
                             Download Resume
