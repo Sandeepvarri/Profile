@@ -21,7 +21,7 @@ class Contact extends Component {
     handleCopy(value) {
         navigator.clipboard.writeText(value);
         this.setState({ alertVisible: true })
-        setTimeout( this.handleDismiss , 2000);
+        setTimeout(this.handleDismiss, 2000);
     }
 
     handleDismiss() {
@@ -36,35 +36,66 @@ class Contact extends Component {
                 </Alert>
                 </div>
                 <Jumbotron>
-                    <div>
-                        <h1 className='display-3 genColor' >Contact me..</h1>
-                        <h5>
-                            <FontAwesomeIcon icon={['fas', 'mobile-alt']} /> -
+                    <div className='container'>
+                        <h1 className='display-4 genColor' >Contact me..</h1>
+                        <div className='row mb-2'>
+                            <div className=' col-3'>
+                                <h5 >
+                                    Mobile <FontAwesomeIcon icon={['fas', 'mobile-alt']} /> :
+                            </h5>
+                            </div>
+                            <div className=' col-9'>
                                 <span className='ml-1 mr-2'>{this.state.number}</span>
-                            <Button onClick={() => this.handleCopy(this.state.number)}><FontAwesomeIcon icon={['fas', 'copy']} /></Button>
-                        </h5>
-                        <h5>
-                            <FontAwesomeIcon icon={['fab', 'linkedin']} color='#0066cc' /> -
-                            <a href='https://www.linkedin.com/in/poorna-varri' > {this.state.linkedIn} </a>
-                        </h5>
-                        <h5>
-                            <FontAwesomeIcon icon={['fas', 'envelope']} color='#e60000' /> -
-                            <span className='ml-1'>{this.state.gmail} </span>
-                            <Button onClick={() => this.handleCopy(this.state.gmail)}><FontAwesomeIcon icon={['fas', 'copy']} /></Button>
-                        </h5>
+                                <Button onClick={() => this.handleCopy(this.state.number)}><FontAwesomeIcon icon={['fas', 'copy']} /></Button>
+                            </div>
+                        </div>
+                        <div className='row mb-2'>
+                            <div className=' col-3 '>
+                                <h5 >
+                                    LinkedIn <FontAwesomeIcon icon={['fab', 'linkedin']} color='#0066cc' /> :
+                                </h5>
+                            </div>
+                            <div className=' col-9'>
+                                <a href='https://www.linkedin.com/in/poorna-varri' > {this.state.linkedIn} </a>
+                            </div>
+                        </div>
+                        <div className='row mb-2'>
+                            <div className=' col-3'>
+                                <h5 >
+                                    Email <FontAwesomeIcon icon={['fas', 'envelope']} color='#e60000' /> :
+                            </h5>
+                            </div>
+                            <div className=' col-9'>
+                                <span className='ml-1'>{this.state.gmail} </span>
+                                <Button onClick={() => this.handleCopy(this.state.gmail)}><FontAwesomeIcon icon={['fas', 'copy']} /></Button>
+                            </div>
+                        </div>
 
-                        <h5>
-                            <FontAwesomeIcon icon={['fas', 'building']} color='#0066cc' /> -
+                        <div className='row mb-2'>
+                            <div className=' col-3'>
+                                <h5 >
+                                    Company Address <FontAwesomeIcon icon={['fas', 'building']} color='#0066cc' /> :
+                                 </h5>
+                            </div>
+                            <div className=' col-9'>
                                 <span className='ml-1'>{this.state.officeAddress}</span>
-                        </h5>
-                        <h5>
-                            <FontAwesomeIcon icon={['fas', 'home']} color='#996633' /> -
-                                <span className='ml-1'>{this.state.HomeAddress} </span></h5>
+                            </div>
+                        </div>
+                        <div className='row mb-2'>
+                            <div className=' col-3'>
+                                <h5 >
+                                    Home Address <FontAwesomeIcon icon={['fas', 'home']} color='#996633' /> :
+                                 </h5>
+                            </div>
+                            <div className=' col-9'>
+                                <span className='ml-1'>{this.state.HomeAddress} </span>
+                            </div>
+                        </div>
 
                     </div>
                 </Jumbotron>
 
-            </div>
+            </div >
         )
     }
 }

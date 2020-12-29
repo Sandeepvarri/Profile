@@ -62,7 +62,7 @@ class Resume extends Component {
 
         const skills = profile.skills.map((skill,index) => {
             return (
-                <div className="col-1" key={index}>
+                <div className="col-3 col-md-1" key={index}>
                     <div className="row  justify-content-center">
                         <FontAwesomeIcon icon={['fab', skill.logo]} size='3x' color={skill.color} />
                     </div>
