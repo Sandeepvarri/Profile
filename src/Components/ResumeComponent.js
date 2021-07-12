@@ -14,7 +14,7 @@ function RenderCard(props) {
                     </span>
                     {props.heading}
                     <span className='float-right'>
-                        <FontAwesomeIcon icon={['fas', props.isCollapse? 'caret-up':'caret-down']} size='lg' color='#713e9c' />
+                        <FontAwesomeIcon icon={['fas', props.isCollapse ? 'caret-up' : 'caret-down']} size='lg' color='#713e9c' />
                     </span>
                 </h4>
             </CardHeader>
@@ -60,7 +60,7 @@ class Resume extends Component {
             )
         });
 
-        const skills = profile.skills.map((skill,index) => {
+        const skills = profile.skills.map((skill, index) => {
             return (
                 <div className="col-3 col-md-1" key={index}>
                     <div className="row  justify-content-center">
@@ -73,26 +73,31 @@ class Resume extends Component {
             )
         })
 
-        const professionalExperience = profile.proExp.map((exp, index) => {
+        const professionalExperience = <div>
+        <h3 className='genColor'>Organization : Capgemini </h3>
+        {profile.proExp.map((exp, index) => {
             return (
                 <div key={index}>
-                    <h5><span className='genColor'>{exp.name}</span> | {exp.startDate.month},{exp.startDate.year} - {exp.endDate.month},{exp.endDate.year}</h5>
+                    <h5><span className='genColor'>{exp.name}</span> | {exp.startDate.month},{exp.startDate.year} - {exp.endDate ? `${exp.endDate.month}, ${exp.endDate.year}` : 'present'} </h5>
                     <h6>Project summary: </h6><div>{exp.summary}</div>
-                    <br />
-                    <h6>Roles and Responsibilities: </h6>
-                    <ul>
-                        {exp.rolesAndResp.map(rr => <li>{rr.role}</li>)}
-                    </ul>
+                
+                    <p><strong>Role:</strong> {exp.role} </p>
+                    <p><strong>Technologies Used: </strong> {
+                        exp.techUsed.join(', ')
+                    }</p>
+
                     {(index + 1) !== profile.proExp.length && <hr />}
                 </div>
             )
-        });
+        })
+    }
+</div>
 
-        const certifications = profile.certifications.map((certificate,index) => {
+        const certifications = profile.certifications.map((certificate, index) => {
             return (
-            <div key={index}>
-                <h6>{certificate.name} - {certificate.school}</h6>
-            </div>
+                <div key={index}>
+                    <h6>{certificate.name} - {certificate.school}</h6>
+                </div>
             )
         })
 

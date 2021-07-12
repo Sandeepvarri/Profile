@@ -8,15 +8,15 @@ class Home extends Component {
         this.state = {
             firstname : 'Poorna Chandra Rao',
             lastname : 'Varri',
-            currentPos : 'Senior Software Engineer at Capgemini',
+            currentPos : 'Associate Consultant at Capgemini',
             currentPosLoc : 'Hyderabad, Telangana, India',
             intro : 'I am having profound knowledge in Web development and Database management. I am having advanced proficiencies in React.JS, JavaScript, MongoDB and having solid foundation in HTML, CSS, Bootstrap and SQL. I am a quick learner and self-motivated',
             totalProExp : {
-                years : '2',
-                months: '6'
+                years : '3',
+                months: '1'
             },
             goal : 'Full Stack Developer',
-            lastUpdated : '12th Dec, 2020',
+            lastUpdated : '12th July, 2021',
         }
     }
     render() {
