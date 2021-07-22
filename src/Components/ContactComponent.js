@@ -91,7 +91,8 @@ class Contact extends Component {
                                 <span className='ml-1'>{this.state.HomeAddress} </span>
                             </div>
                         </div>
-
+                        <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="dark" data-type="VERTICAL" data-vanity="poorna-varri" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://in.linkedin.com/in/poorna-varri?trk=profile-badge">Poorna chandrarao varri</a></div>
+              
                     </div>
                 </Jumbotron>
 
